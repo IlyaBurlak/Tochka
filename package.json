@@ -1,7 +1,14 @@
 {
   "name": "tochka-shop",
   "description": "Современный онлайн магазин одежды Tochka Shop",
-  "keywords": ["ecommerce", "clothing", "shop", "react", "typescript", "vite"],
+  "keywords": [
+    "ecommerce",
+    "clothing",
+    "shop",
+    "react",
+    "typescript",
+    "vite"
+  ],
   "author": "Tochka Shop Team",
   "homepage": "https://tochka-shop.ru",
   "private": true,
