@@ -1,73 +1,163 @@
-# React + TypeScript + Vite
+# 🛍️ Tochka Shop - Онлайн магазин одежды
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Сайт:** [tochka-shop.ru](https://tochka-shop.ru)
 
-Currently, two official plugins are available:
+Современный онлайн магазин одежды, построенный на React с TypeScript. Проект предоставляет удобный интерфейс для покупки одежды с современным дизайном и отличной производительностью.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Особенности
 
-## React Compiler
+- 🎨 **Современный дизайн** - адаптивный интерфейс с красивой анимацией
+- ⚡ **Быстрая загрузка** - оптимизированная производительность с Vite
+- 📱 **Мобильная версия** - полностью адаптивный дизайн для всех устройств
+- 🔍 **Удобный поиск** - быстрый поиск товаров по категориям и характеристикам
+- 🛒 **Корзина покупок** - интуитивно понятный процесс оформления заказа
+- 💳 **Безопасные платежи** - интеграция с популярными платежными системами
+- 📦 **Отслеживание заказов** - возможность отслеживать статус доставки
+- ⭐ **Система отзывов** - отзывы и рейтинги товаров
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Технологический стек
 
-## Expanding the ESLint configuration
+### Frontend
+- **React 18** - современная библиотека для создания пользовательских интерфейсов
+- **TypeScript** - типизированный JavaScript для надежности кода
+- **Vite** - быстрый инструмент сборки и разработки
+- **React Router** - маршрутизация для SPA
+- **Sass** - препроцессор CSS для стилизации
+- **Lucide React** - красивые иконки
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Инструменты разработки
+- **ESLint** - проверка качества кода
+- **Prettier** - форматирование кода
+- **TypeScript** - проверка типов
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Быстрый старт
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Предварительные требования
+- Node.js 18+ 
+- npm или yarn
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Установка
+
+1. **Клонируйте репозиторий**
+   ```bash
+   git clone https://github.com/your-username/tochka-shop.git
+   cd tochka-shop
+   ```
+
+2. **Установите зависимости**
+   ```bash
+   npm install
+   ```
+
+3. **Запустите проект в режиме разработки**
+   ```bash
+   npm run dev
+   ```
+
+4. **Откройте браузер**
+   ```
+   http://localhost:5173
+   ```
+
+## Доступные команды
+
+### Разработка
+```bash
+npm run dev          # Запуск сервера разработки
+npm run build        # Сборка для продакшена
+npm run preview      # Предварительный просмотр сборки
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Проверка качества кода
+```bash
+npm run type-check   # Проверка типов TypeScript
+npm run lint         # Проверка ESLint
+npm run check        # Комплексная проверка (типы + ESLint)
 ```
+
+### Исправление кода
+```bash
+npm run lint:fix     # Автоисправление ESLint
+npm run format       # Форматирование файлов в src/
+npm run fix          # Комплексное исправление (ESLint + форматирование)
+```
+
+## Структура проекта
+
+```
+src/
+├── components/          # Переиспользуемые компоненты
+│   ├── ui/             # Базовые UI компоненты
+│   ├── layout/         # Компоненты макета
+│   └── forms/          # Формы
+├── pages/              # Страницы приложения
+│   ├── Home/           # Главная страница
+│   ├── Catalog/        # Каталог товаров
+│   ├── Product/        # Страница товара
+│   ├── Cart/           # Корзина
+│   └── Checkout/       # Оформление заказа
+├── hooks/              # Пользовательские хуки
+├── utils/              # Утилиты и хелперы
+├── types/              # TypeScript типы
+├── styles/             # Глобальные стили
+└── assets/             # Статические ресурсы
+```
+
+## Дизайн и UX
+
+- **Цветовая схема**: Современная палитра с акцентом на удобство использования
+- **Типографика**: Читаемые шрифты для всех размеров экрана
+- **Анимации**: Плавные переходы и микроанимации
+- **Доступность**: Соответствие стандартам WCAG для доступности
+
+## 📱 Адаптивность
+
+Проект полностью адаптивен и оптимизирован для:
+-  Мобильные устройства (320px+)
+-  Планшеты (768px+)
+-  Десктопы (1024px+)
+- ️ Большие экраны (1440px+)
+
+## Конфигурация
+
+### ESLint
+Конфигурация ESLint настроена для работы с React, TypeScript и современными стандартами JavaScript.
+
+### Prettier
+Настроено единообразное форматирование кода с поддержкой всех используемых языков.
+
+### TypeScript
+Строгая типизация для повышения надежности и удобства разработки.
+
+##  Развертывание
+
+### Продакшен сборка
+```bash
+npm run build
+```
+
+### Предварительный просмотр
+```bash
+npm run preview
+```
+
+##  Участие в разработке
+
+1. Форкните репозиторий
+2. Создайте ветку для новой функции (`git checkout -b feature/amazing-feature`)
+3. Зафиксируйте изменения (`git commit -m 'Add some amazing feature'`)
+4. Отправьте в ветку (`git push origin feature/amazing-feature`)
+5. Откройте Pull Request
+
+##  Лицензия
+
+Этот проект лицензирован под MIT License - см. файл [LICENSE](LICENSE) для деталей.
+
+##  Контакты
+
+- **Сайт**: [tochka-shop.ru](https://tochka-shop.ru)
+
+
+---
+
+**Tochka Shop** - ваш стиль, наш сервис! 👗✨
