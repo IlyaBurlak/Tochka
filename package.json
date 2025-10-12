@@ -1,7 +1,7 @@
 {
   "name": "clothing-store",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,6 +13,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.263.1",
@@ -40,6 +41,6 @@
     "prettier": "^3.6.2",
     "sass": "^1.93.2",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "vite": "7.1.5"
   }
 }
