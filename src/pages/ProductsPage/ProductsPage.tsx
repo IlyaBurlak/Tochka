@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Header } from '../../components/Header/Header.tsx';
 import { HeroSection } from '../../components/HeroSection/HeroSection.tsx';
 
-const ProductsPage = () => {
+export const ProductsPage = () => {
   return (
     <div className='home-page'>
       <Header />
@@ -33,5 +33,3 @@ const ProductsPage = () => {
     </div>
   );
 };
-
-export default ProductsPage;
