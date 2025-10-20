@@ -26,6 +26,8 @@
     "fix": "npm run lint:fix && npm run format"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "clsx": "^2.1.1",
     "eslint-plugin-prettier": "^5.5.4",
     "lucide-react": "^0.263.1",
