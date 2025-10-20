@@ -1,0 +1,304 @@
+@import '../../styles/variables';
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 4rem;
+  align-items: center;
+  min-height: 80vh;
+
+  .hero-content {
+    h1 {
+      @extend %heading;
+      font-size: $font-size-xxl;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+
+      .accent {
+        color: $color-primary;
+      }
+    }
+
+    .subtitle {
+      @extend %body-text;
+      font-size: 1.5rem;
+      color: $color-gray;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+
+      a {
+        text-decoration: none;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        font-family: $font-family;
+        font-weight: $font-weight-medium;
+        font-size: 1.1rem;
+        cursor: pointer;
+        border: none;
+        transition: all 0.3s ease;
+        display: inline-block;
+        text-align: center;
+        flex: 1;
+        min-width: 200px;
+        box-sizing: border-box;
+
+        &.btn-primary {
+          background: $color-primary;
+          color: white;
+
+          &:hover {
+            background: #0052cc;
+            transform: translateY(-2px);
+          }
+        }
+
+        &.btn-secondary {
+          background: transparent;
+          color: $color-dark;
+          border: 2px solid $color-light-gray;
+
+          &:hover {
+            border-color: $color-primary;
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+
+    .stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+
+      .stat-item {
+        flex: 1;
+        min-width: 120px;
+
+        .number {
+          @extend %heading;
+          font-size: 2rem;
+          color: $color-primary;
+          display: block;
+        }
+
+        .label {
+          @extend %body-text;
+          color: $color-gray;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  .hero-animation {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(135deg, $color-primary 0%, #7b61ff 50%, #00d4ff 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .animation-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+
+      .animated-text {
+        @extend %heading;
+        font-size: 3.5rem;
+        margin-bottom: 0.5rem;
+        animation: fadeInUp 0.8s ease-out;
+        text-transform: uppercase;
+        color: white;
+        font-weight: $font-weight-semi-bold;
+      }
+
+      .animated-subtitle {
+        @extend %body-text;
+        font-size: 1.8rem;
+        opacity: 0.9;
+        animation: fadeInUp 0.8s ease-out 0.3s both;
+        color: white;
+        font-weight: $font-weight-light;
+        margin-bottom: 0.5rem;
+      }
+
+      .animated-tagline {
+        @extend %body-text;
+        font-size: 1.2rem;
+        opacity: 0.8;
+        animation: fadeInUp 0.8s ease-out 0.6s both;
+        color: white;
+        font-weight: $font-weight-regular;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    .hero-content {
+      h1 {
+        font-size: $font-size-xl;
+      }
+
+      .cta-buttons {
+        a {
+          min-width: 180px;
+          font-size: 1rem;
+          padding: 0.9rem 1.8rem;
+        }
+      }
+    }
+
+    .hero-animation {
+      .animation-content {
+        .animated-text {
+          font-size: 3rem;
+        }
+        .animated-subtitle {
+          font-size: 1.5rem;
+        }
+        .animated-tagline {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    text-align: center;
+    gap: 3rem;
+
+    .hero-content {
+      h1 {
+        font-size: $font-size-lg;
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+      }
+
+      .cta-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+
+        a {
+          flex: 1 1 calc(50% - 0.8rem);
+          min-width: 160px;
+          font-size: 0.95rem;
+          padding: 0.8rem 1.5rem;
+        }
+      }
+
+      .stats {
+        justify-content: center;
+        gap: 1.5rem;
+
+        .stat-item {
+          flex: 0 0 calc(50% - 1rem);
+
+          .number {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    .hero-animation {
+      height: 400px;
+
+      .animation-content {
+        .animated-text {
+          font-size: 2.5rem;
+        }
+        .animated-subtitle {
+          font-size: 1.3rem;
+        }
+        .animated-tagline {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1rem;
+
+    .hero-content {
+      .cta-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+
+        a {
+          flex: 1;
+          min-width: 100%;
+          font-size: 0.9rem;
+          padding: 0.8rem 1.2rem;
+          width: 100%;
+        }
+      }
+
+      .stats {
+        flex-direction: column;
+        gap: 1rem;
+
+        .stat-item {
+          flex: 0 0 100%;
+          text-align: center;
+
+          .number {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+
+    .hero-animation {
+      height: 300px;
+
+      .animation-content {
+        .animated-text {
+          font-size: 2rem;
+        }
+        .animated-subtitle {
+          font-size: 1.1rem;
+        }
+        .animated-tagline {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
