@@ -1,3 +1,5 @@
+import './FloatingShapes.scss';
+
 interface FloatingShapesProps {
   count: number;
 }

@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import '../../styles/HomePage.scss';
 import { Header } from '../../components/Header/Header.tsx';
 import { HeroSection } from '../../components/HeroSection/HeroSection.tsx';
 
