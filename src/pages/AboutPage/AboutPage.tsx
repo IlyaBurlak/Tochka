@@ -1,0 +1,45 @@
+import { Link } from 'react-router-dom';
+import '../../styles/HomePage.scss';
+import { Header } from '../../components/Header/Header.tsx';
+import { HeroSection } from '../../components/HeroSection/HeroSection.tsx';
+
+export const AboutPage = () => {
+  return (
+    <div className='home-page'>
+      <Header />
+
+      <HeroSection
+        animationContent={
+          <>
+            <div className='animated-text'>Наша история</div>
+            <div className='animated-subtitle'>С 2025 года</div>
+          </>
+        }
+        ctaButtons={
+          <div className='cta-buttons'>
+            <Link className='btn-secondary' to='/'>
+              На главную
+            </Link>
+          </div>
+        }
+        shapesCount={4}
+        subtitle={
+          <>
+            <span className='quote'>
+              <span className='quote-mark'>&ldquo; </span>
+              Сила не говорит, мудрость не спорит, мастерство не нуждается в признании. Всё это
+              видно в тишине дела.
+              <span className='quote-mark'>&rdquo;</span>
+            </span>
+            <span className='quote-author'>— Из хроник великих созидателей</span>
+          </>
+        }
+        title={
+          <>
+            О <span className='accent'>Нас</span>
+          </>
+        }
+      />
+    </div>
+  );
+};

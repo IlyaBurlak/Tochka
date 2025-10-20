@@ -1,4 +1,3 @@
-
 $font-family: 'Outfit', sans-serif;
 
 $font-weight-light: 300;
@@ -11,10 +10,10 @@ $font-size-xl: 70px;
 $font-size-lg: 50px;
 
 $color-dark: #232323;
-$color-primary: #0067FF;
-$color-gray: #6E7174;
-$color-light-gray: #E7EBEE;
-$color-off-white: #F9F9F9;
+$color-primary: #0067ff;
+$color-gray: #6e7174;
+$color-light-gray: #e7ebee;
+$color-off-white: #f9f9f9;
 
 %heading {
   font-family: $font-family;
@@ -29,11 +28,25 @@ $color-off-white: #F9F9F9;
   color: $color-dark;
 }
 
-.text-xxl { font-size: $font-size-xxl; }
-.text-xl { font-size: $font-size-xl; }
-.text-lg { font-size: $font-size-lg; }
+.text-xxl {
+  font-size: $font-size-xxl;
+}
+.text-xl {
+  font-size: $font-size-xl;
+}
+.text-lg {
+  font-size: $font-size-lg;
+}
 
-.color-primary { color: $color-primary; }
-.color-gray { color: $color-gray; }
-.bg-light-gray { background-color: $color-light-gray; }
-.bg-off-white { background-color: $color-off-white; }
+.color-primary {
+  color: $color-primary;
+}
+.color-gray {
+  color: $color-gray;
+}
+.bg-light-gray {
+  background-color: $color-light-gray;
+}
+.bg-off-white {
+  background-color: $color-off-white;
+}
