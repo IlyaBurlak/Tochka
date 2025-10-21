@@ -1,4 +1,5 @@
-@import '../../styles/variables';
+@use '../../styles/variables' as *;
+@use 'sass:color';
 
 .header {
   padding: 2rem 4rem;
@@ -37,30 +38,40 @@
     }
   }
 
-  .cart-icon {
-    background: $color-primary;
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+  .auth-buttons {
     display: flex;
+    gap: 1rem;
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    font-size: 1.2rem;
-    position: relative;
 
-    &::before {
-      content: '🛒';
-      filter: brightness(0) invert(1);
-      display: block;
-      line-height: 1;
-    }
+    .auth-button {
+      @extend %body-text;
+      padding: 0.5rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: $font-weight-medium;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      border: 2px solid transparent;
 
-    &:hover {
-      transform: scale(1.1);
-      background: darken($color-primary, 10%);
+      &.login-button {
+        color: $color-primary;
+        border-color: $color-primary;
+        background: transparent;
+
+        &:hover {
+          background: $color-primary;
+          color: white;
+        }
+      }
+
+      &.register-button {
+        background: $color-primary;
+        color: white;
+
+        &:hover {
+          background: color.adjust($color-primary, $lightness: -10%);
+        }
+      }
     }
   }
 
@@ -101,12 +112,15 @@
       }
     }
 
-    .cart-icon {
+    .auth-buttons {
       order: 1;
       margin-left: auto;
-      width: 35px;
-      height: 35px;
-      font-size: 1rem;
+      gap: 0.5rem;
+
+      .auth-button {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+      }
     }
   }
 
@@ -137,12 +151,18 @@
       }
     }
 
-    .cart-icon {
+    .auth-buttons {
       order: 3;
       margin-left: 0;
-      width: 32px;
-      height: 32px;
-      font-size: 0.9rem;
+      width: 100%;
+      justify-content: center;
+
+      .auth-button {
+        flex: 1;
+        max-width: 120px;
+        text-align: center;
+        font-size: 0.85rem;
+      }
     }
   }
 }
