@@ -1,4 +1,4 @@
-@import '../../styles/variables';
+@import '../../shared/styles/variables';
 
 .floating-shapes {
   position: absolute;
@@ -120,7 +120,6 @@
   }
 }
 
-// Responsive tweaks used by hero animation
 @media (max-width: 768px) {
   .floating-shapes {
     .shape {

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Header } from '../../components/Header/Header.tsx';
-import { HeroSection } from '../../components/HeroSection/HeroSection.tsx';
+
+import { Header } from '../../widgets/Header/Header.tsx';
+import { HeroSection } from '../../widgets/HeroSection/HeroSection.tsx';
 
 export const AboutPage = () => {
   return (

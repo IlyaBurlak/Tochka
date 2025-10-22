@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
+
 import { FloatingShapes } from '../FloatingShapes/FloatingShapes.tsx';
+
 import './HeroSection.scss';
 
 interface HeroSectionProps {

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Header } from '../../components/Header/Header.tsx';
+
+import { Header } from '../../widgets/Header/Header.tsx';
 
 export const ContactPage = () => {
   return (

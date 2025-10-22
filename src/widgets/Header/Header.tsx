@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+
 import './Header.scss';
 
 export const Header = () => {
@@ -11,8 +12,12 @@ export const Header = () => {
         <Link to='/contact'>Контакты</Link>
       </nav>
       <div className='auth-buttons'>
-        <Link to='/login' className='auth-button login-button'>Войти</Link>
-        <Link to='/register' className='auth-button register-button'>Регистрация</Link>
+        <Link className='auth-button login-button' to='/login'>
+          Войти
+        </Link>
+        <Link className='auth-button register-button' to='/register'>
+          Регистрация
+        </Link>
       </div>
     </header>
   );
